@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mA3-tD-NSR">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Wall List View Controller - Wall-->
+        <scene sceneID="pD2-5d-k3o">
+            <objects>
+                <tableViewController id="dqj-yV-Rg4" customClass="ASWallListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" id="sZ7-53-38K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="45" id="FlD-dV-YbS" customClass="ASFeedCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="45"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FlD-dV-YbS" id="2rG-qs-k5R">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Wall" id="7BR-KJ-woa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Aae-db-EIE">
+                            <connections>
+                                <action selector="addTweetAction:" destination="dqj-yV-Rg4" id="3Mn-4m-yr1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRJ-hd-Mf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="293" y="-800"/>
+        </scene>
+        <!--Navigation Controller - Home-->
+        <scene sceneID="W20-FL-OHt">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="mA3-tD-NSR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home_icon.png" id="a0O-hg-uLz"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Trz-1m-GoD">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.098039215690000001" green="0.57647058819999997" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dqj-yV-Rg4" kind="relationship" relationship="rootViewController" id="11Z-y6-HNO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vwz-Wx-nNr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235" y="-800"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_icon.png" width="30" height="28"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
